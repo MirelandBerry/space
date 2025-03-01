@@ -1,80 +1,120 @@
-/* 页面基本设置 */
+/* 基础布局 */
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #f4f4f9; /* 淡灰色背景 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
     margin: 0;
-    background-image: url('background.jpg'); /* 可替换为日式动漫风格背景 */
-    background-size: cover;
-    background-position: center;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
-/* 容器样式 */
 .container {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.15); /* 半透明背景 */
-    border-radius: 50px;
-    padding: 40px 20px;
-    width: 90%;
-    max-width: 700px;
-    height: auto; /* 高度自适应 */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-/* 九宫格按钮布局 */
+/* 标题样式 */
+h1 {
+    color: #f8f4e3;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 九宫格布局 */
 .phonetic-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-bottom: 30px;
-    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
-    border-radius: 50px;
-    padding: 15px;
-    width: 100%;
-    box-sizing: border-box;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-/* 处理按钮的自适应 */
+/* 按钮样式 */
 .phonetic-button button {
-    width: 90px; /* 自适应宽度 */
-    height: 90px; /* 自适应高度 */
-    border-radius: 50%;
-    background-color: #ffcc5c; /* 温暖的黄色 */
+    background-color: #008cba;
     color: white;
     border: none;
-    font-size: 18px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* 响应式设计 */
+.phonetic-button button:hover {
+    background-color: #005f6b;
+}
+
+/* 输入区 */
+.input-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#input-numbers {
+    padding: 10px;
+    font-size: 1rem;
+    width: 200px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #008cba;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #005f6b;
+}
+
+/* 延迟选择区域 */
+.delay-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+select {
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* 响应式布局 */
 @media (max-width: 768px) {
     .phonetic-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-    }
-    
-    .phonetic-button button {
-        width: 80px;
-        height: 80px;
-        font-size: 16px;
+        gap: 8px;
     }
 
-    .container {
-        padding: 30px 15px;
+    .phonetic-button button {
+        width: 70px;
+        height: 70px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #input-numbers {
+        width: 180px;
+    }
+
+    .delay-section {
+        font-size: 0.9rem;
     }
 }
 
@@ -85,8 +125,16 @@ body {
     }
 
     .phonetic-button button {
-        width: 70px;
-        height: 70px;
-        font-size: 14px;
+        width: 60px;
+        height: 60px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #input-numbers {
+        width: 160px;
     }
 }
