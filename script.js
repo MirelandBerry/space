@@ -15,11 +15,13 @@ const sounds = {
 const baseURL = "https://MirelandBerry.github.io/space/sounds/";
 
 // 播放对应单词的音频
-function playSound(word) {
+async function playSound(word) {
     const audio = new Audio(`${baseURL}${sounds[word]}`);
-    audio.play().catch(error => {
-        console.log("无法播放音频：", error);
-    });
+    try {
+        await audio.play();  // 确保音频播放
+    } catch (error) {
+        console.log("音频播放失败：", error);
+    }
 }
 
 // 播放音频序列
