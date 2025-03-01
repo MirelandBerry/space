@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Phonetic Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Call me, Baby!</h1>
+        <div class="phonetic-grid">
+            <!-- 第一行按钮 -->
+            <div class="phonetic-button">
+                <button id="bit" onclick="playSound('bit')">
+                    <span class="number">1</span>
+                    <span class="word">bit</span>
+                    <span class="phonetic">/ɪ/</span>
+                </button>
+            </div>
+            <div class="phonetic-button">
+                <button id="bat" onclick="playSound('bat')">
+                    <span class="number">2</span>
+                    <span class="word">bat</span>
+                    <span class="phonetic">/æ/</span>
+                </button>
+            </div>
+            <div class="phonetic-button">
+                <button id="bet" onclick="playSound('bet')">
+                    <span class="number">3</span>
+                    <span class="word">bet</span>
+                    <span class="phonetic">/e/</span>
+                </button>
+            </div>
+            <!-- 第二行按钮 -->
+            <div class="phonetic-button">
+                <button id="boat" onclick="playSound('boat')">
+                    <span class="number">4</span>
+                    <span class="word">boat</span>
+                    <span class="phonetic">/əʊ/</span>
+                </button>
+            </div>
+            <div class="phonetic-button">
+                <button id="boot" onclick="playSound('boot')">
+                    <span class="number">5</span>
+                    <span class="word">boot</span>
+                    <span class="phonetic">/uː/</span>
+                </button>
+            </div>
+            <div class="phonetic-button">
+                <button id="but" onclick="playSound('but')">
+                    <span class="number">6</span>
+                    <span class="word">but</span>
+                    <span class="phonetic">/ə/</span>
+                </button>
+            </div>
+            <!-- 第三行按钮 -->
+            <div class="phonetic-button">
+                <button id="bait" onclick="playSound('bait')">
+                    <span class="number">7</span>
+                    <span class="word">bait</span>
+                    <span class="phonetic">/eɪ/</span>
+                </button>
+            </div>
+            <div class="phonetic-button">
+                <button id="beat" onclick="playSound('beat')">
+                    <span class="number">8</span>
+                    <span class="word">beat</span>
+                    <span class="phonetic">/iː/</span>
+                </button>
+            </div>
+            <div class="phonetic-button">
+                <button id="bert" onclick="playSound('bert')">
+                    <span class="number">9</span>
+                    <span class="word">bert</span>
+                    <span class="phonetic">/ɜː/</span>
+                </button>
+            </div>
+            <!-- 最后一行装饰按钮 -->
+            <div class="phonetic-button decoration">
+                <button>*<br></button>
+            </div>
+            <div class="phonetic-button">
+                <button id="bart" onclick="playSound('bart')">
+                    <span class="number">0</span>
+                    <span class="word">bart</span>
+                    <span class="phonetic">/ɑː/</span>
+                </button>
+            </div>
+            <div class="phonetic-button decoration">
+                <button>#<br></button>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="input-numbers" placeholder="Enter a sequence of numbers">
+            <button onclick="playSequence()">Play Sequence</button>
+        </div>
+    </div>
+
+    <div class="delay-section">
+        <label for="delay">Choose delay:</label>
+        <select id="delay">
+            <option value="1000">1 second</option>
+            <option value="2000">2 seconds</option>
+            <option value="3000">3 seconds</option>
+        </select>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
