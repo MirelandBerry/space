@@ -11,9 +11,12 @@ const sounds = {
     'bart': 'bart.mp3'
 };
 
+// 获取GitHub页面的基地址
+const baseURL = "https://your-username.github.io/your-repository-name/sounds/";
+
 // 播放对应单词的音频
 function playSound(word) {
-    const audio = new Audio(`sounds/${sounds[word]}`);
+    const audio = new Audio(`${baseURL}${sounds[word]}`);
     audio.play();
 }
 
