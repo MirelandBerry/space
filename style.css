@@ -7,7 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('background.jpg'); /* 可替换为日式动漫风格背景 */
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     overflow-x: hidden; /* 防止横向滚动条 */
@@ -25,6 +25,10 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 标题样式 */
@@ -40,7 +44,7 @@ h1 {
 .phonetic-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 30px;
     background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
     border-radius: 50px;
@@ -60,8 +64,8 @@ h1 {
 }
 
 .phonetic-button button {
-    width: 110px;
-    height: 110px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-color: #ffcc5c; /* 温暖的黄色 */
     color: white;
@@ -86,12 +90,12 @@ h1 {
 
 /* 单词和音标样式 */
 .word {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .phonetic {
-    font-size: 22px;
+    font-size: 16px;
     margin-top: 5px;
 }
 
@@ -162,6 +166,14 @@ select {
     margin-top: 10px;
 }
 
+/* 固定延迟选择框在页面右下角 */
+.delay-section {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
 /* 响应式布局 */
 @media (max-width: 768px) {
     /* 调整九宫格按钮布局 */
@@ -185,11 +197,20 @@ select {
     }
 
     .delay-section {
-        margin-top: 10px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
     }
 
     button {
         font-size: 18px;
         padding: 12px 20px;
+    }
+
+    /* 九宫格按钮适配 */
+    .phonetic-button button {
+        width: 70px;
+        height: 70px;
+        font-size: 14px; /* 字体和按钮调整 */
     }
 }
