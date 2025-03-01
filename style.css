@@ -7,7 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('background.jpg');
+    background-image: url('background.jpg'); 
     background-size: cover;
     background-position: center;
     overflow-x: hidden; /* 防止横向滚动条 */
@@ -16,7 +16,7 @@ body {
 /* 容器样式 */
 .container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.15); /* 半透明背景 */
+    background-color: rgba(255, 255, 255, 0.2); /* 半透明背景 */
     border-radius: 50px;
     padding: 40px 20px;
     width: 80%;
@@ -34,7 +34,7 @@ body {
 /* 标题样式 */
 h1 {
     font-size: 36px;
-    color: #f4e1d2; /* 米白色 */
+    color: #f9efec; /* 米白色 */
     margin-bottom: 20px;
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -73,7 +73,7 @@ h1 {
     font-size: 18px;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -82,10 +82,18 @@ h1 {
     padding: 5px;
 }
 
+/* 鼠标悬停效果 */
 .phonetic-button button:hover {
     background-color: #ffbb33; /* 橙黄色 */
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 按钮被按下时的效果 */
+.phonetic-button button:active {
+    transform: scale(1); /* 恢复原状 */
+    background-color: #ffcc5c; /* 恢复初始颜色 */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* 单词和音标样式 */
